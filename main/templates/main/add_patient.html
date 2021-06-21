@@ -38,6 +38,7 @@
                     </div>
 
                     <div class="form-field col-md-4 offset-md-2 mb-4 mx-auto">
+                    <label> Bed No : </label>
                     <select name="bed_num" class="btn btn-bed" id="bed_num">
                     {% for bed in beds %}
                         <option value={{ bed }}>{{ bed }}</option>
@@ -48,6 +49,7 @@
             </div>
             <div class="row">
                 <div class="form-field col-md-6">
+                    <label>DOB :</label>
                     <input type="date" id="dob" class="input-text" type="date" name="dob">
                 </div>
 
@@ -80,7 +82,6 @@
                 <!-- <div class="row"> -->
                     <div class="common-symptoms col-md-4">
                         <label for="" class="symptom-type">Common</label><br>
-
                         <div class="symptom">
                         <input type="checkbox" name="symptoms" id="fever" value="Fever" class="checkbox">
                         <label for="fever">Fever</label><br>
@@ -97,7 +98,7 @@
                 
                     <div class="less-common-symptoms col-md-4">
                     <div>
-                        <label for="" class="symptom-type">Less Common</label><br>
+                        <label for="" class="symptom-type">Intermediate</label><br>
                         
                         <div class="symptom">
                         <input type="checkbox" name="symptoms" value="Aches and pains" id="aches_and_pain">
@@ -122,19 +123,19 @@
                     </div>
                     
                     <div class="serious-symptoms col-md-4">
-                        <label for="" class="symptom-type">Serious</label><br>
+                        <label for="" class="symptom-type">Critical</label><br>
         
                         <div class="symptom">
                         <input type="checkbox" name="symptoms" value="Difficulty in breathing or shortness of breath" id="difficulty_in_breathing_or_shortness_of_breath">
-                        <label for="">Difficulty in breathing or shortness of breath</label><br>
+                        <label for="">Breathing Problem</label><br>
                         </div>
                         <div class="symptom">
                         <input type="checkbox" name="symptoms" value="Chest pain or pressure" id="chest_pain_or_pressure">
-                        <label for="">Chest pain or pressure</label><br>
+                        <label for="">Chest pain</label><br>
                         </div>
                         <div class="symptom">
                         <input type="checkbox" name="symptoms" value="Loss Of Speech Or Movement" id="loss_of_speech_or_movement">
-                        <label for="">Loss of speech or movement</label><br>
+                        <label for="">Unable to speak</label><br>
                         </div>
                     </div>  
 
