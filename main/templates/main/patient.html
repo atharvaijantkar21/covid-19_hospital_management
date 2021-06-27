@@ -114,9 +114,10 @@
 									
 
 								<option  {% if patient.status == "Critical"   %} selected="selected" {% endif %} class="bg-danger text-white" value="Critical"  >Critical</option>
+								<option  {% if patient.status == "Recovering"   %} selected="selected" {% endif %} class="bg-danger text-white" value="Recovering"  >Recovering</option>
 								<option  {% if patient.status == "Recovered"   %} selected="selected" {% endif %} class="bg-danger text-white" value="Recovered"  >Recovered</option>
+								
 								<option  {% if patient.status == "Deceased"   %} selected="selected" {% endif %} class="bg-danger text-white" value="Deceased"  >Deceased</option>
-								<option  {% if patient.status == "Dis-charged"   %} selected="selected" {% endif %} class="bg-danger text-white" value="Dis-charged"  >Dis-charged</option>
 								
 							</select>
 						
