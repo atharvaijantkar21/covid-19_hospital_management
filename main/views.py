@@ -128,8 +128,7 @@ def patient(request, pk):
 
 
 def patient_list(request):
-    patients = Patient.objects.all()
-
+    patients = Patient.objects.all().order_by('-id')
     # filtering
     myFilter = PatientFilter(request.GET, queryset=patients)
 
