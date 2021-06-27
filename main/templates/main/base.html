@@ -46,7 +46,10 @@
     <!-- .autocomplete -->
     <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <title>{% block title %} AppName {% endblock %}</title>
+    <style>
+      p.app_name:hover, p.app_name:active {font-size: 250%; background: red; }
+    </style>
+    <title>{% block title %} Co-Tracker {% endblock %}</title>
   </head>
 
   <body>
@@ -73,8 +76,8 @@
 	</div>
 
 	<!-- greeting -->
-	<p class="text-white font-weight-bold px-3 pb-4 mb-0">
-		Hello {{user.first_name}}
+	<p class="text-white  app_name font-weight-bold px-3 pb-4 mb-0">
+		Co-Tracker
 	</p>
 
 	<!-- refirect dashboard -->
