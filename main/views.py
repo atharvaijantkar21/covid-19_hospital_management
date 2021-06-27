@@ -119,7 +119,14 @@ def patient(request, pk):
         patient.doctors_visiting_time = doctor_time
         patient.doctors_notes = doctor_notes
         patient.status = status
+        if patient.status == 'Recovered' or patient.status == 'Deceased':
+            patient.bed_num.occupied= False
+            patient.bed_num.save()
+        if patient.status == 'Critical' or patient.status == 'Recovering' :
+            patient.bed_num.occupied= True
+            patient.bed_num.save()
         patient.save()
+        
         return redirect(f"patient_list")
     context = {
         'patient': patient
