@@ -110,13 +110,16 @@
 						 {% endcomment %}
 						 	<label for="status" class="mb-0">
 							<h6>Status</h6></label>
-							<input
-								type="text"
-								class="input-text"
-								name="status"
-								id="status"
-								value="{{patient.status}}"
-							/>
+							<select class="input-text"  name="status" id="status">
+									
+
+								<option  {% if patient.status == "Critical"   %} selected="selected" {% endif %} class="bg-danger text-white" value="Critical"  >Critical</option>
+								<option  {% if patient.status == "Recovered"   %} selected="selected" {% endif %} class="bg-danger text-white" value="Recovered"  >Recovered</option>
+								<option  {% if patient.status == "Deceased"   %} selected="selected" {% endif %} class="bg-danger text-white" value="Deceased"  >Deceased</option>
+								<option  {% if patient.status == "Dis-charged"   %} selected="selected" {% endif %} class="bg-danger text-white" value="Dis-charged"  >Dis-charged</option>
+								
+							</select>
+						
 							
 						</div>
 
