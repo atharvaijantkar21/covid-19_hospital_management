@@ -116,7 +116,7 @@
 								<option  {% if patient.status == "Critical"   %} selected="selected" {% endif %} class="bg-danger text-white" value="Critical"  >Critical</option>
 								<option  {% if patient.status == "Recovering"   %} selected="selected" {% endif %} class="bg-danger text-white" value="Recovering"  >Recovering</option>
 								<option  {% if patient.status == "Recovered"   %} selected="selected" {% endif %} class="bg-danger text-white" value="Recovered"  >Recovered</option>
-								
+								<option  {% if patient.status == "Dis Charged"   %} selected="selected" {% endif %} class="bg-danger text-white" value="Dis Charged"  >Dis Charged</option>
 								<option  {% if patient.status == "Deceased"   %} selected="selected" {% endif %} class="bg-danger text-white" value="Deceased"  >Deceased</option>
 								
 							</select>
@@ -179,4 +179,5 @@
 			</div>
 	 	</div>
 		 </form>
+		
 {% endblock content %}
