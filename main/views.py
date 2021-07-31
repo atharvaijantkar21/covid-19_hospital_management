@@ -40,13 +40,15 @@ def dashboard(request):
     patient_count = patients.count()
     patients_recovered = Patient.objects.filter(status="Recovered")
     patients_deceased = Patient.objects.filter(status="Deceased")
+    patients_Recovering = Patient.objects.filter(status="Recovering")
     deceased_count = patients_deceased.count()
-    recovered_count = patients_recovered.count()
+    admit_count = patients_recovered.count()+patients_Recovering.count()
     beds = Bed.objects.all()
     beds_available = Bed.objects.filter(occupied=False).count()
     context = {
         'patient_count': patient_count,
-        'recovered_count': recovered_count,
+        'recovered_count': patients_recovered.count(),
+        'admit_count': admit_count,
         'beds_available': beds_available,
         'deceased_count':deceased_count,
         'beds':beds
